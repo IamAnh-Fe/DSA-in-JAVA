@@ -38,6 +38,7 @@ public class _53_Maximum_Subarray {
 
         return ans;
     }
+
            public static int Dynamic(int[] nums) {
    int[] dp = new int[nums.length];
 
@@ -51,13 +52,13 @@ public class _53_Maximum_Subarray {
      }
     public static void main(String[] args) {
         // int nums[] = {1}; //splution: 1
-        // int nums[] = {-2,1,-3,4,-1,2,1,-5,4}; //solution: 6
-        int nums[] = {5,4,-1,7,8}; //solution: 23
+        int nums[] = {-2,1,-3,4,-1,2,1,-5,4}; //solution: 6
+        // int nums[] = {5,4,-1,7,8}; //solution: 23
 
         System.out.println(BruteForce(nums));
-        System.out.println(Kadane(nums));
-        System.out.println(Gready(nums));
-        System.out.println(Dynamic(nums));
+        // System.out.println(Kadane(nums));
+        // System.out.println(Gready(nums));
+        // System.out.println(Dynamic(nums));
 
     }
 }

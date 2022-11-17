@@ -27,10 +27,10 @@ public class _121_Best_Time_to_Buy_and_Sell_Stock {
     }
     
     public static void main(String[] args) {
-    int[] prices1 = {7,1,5,3,6,4}; //solution: 5
+    int[] prices = {7,1,5,3,6,4}; //solution: 5
     // int[] prices = {7,6,4,3,1}; //solution: 0
-    // System.out.println(BruteForce(prices));
-    System.out.println(Dynamic(prices1));
+    System.out.println(BruteForce(prices));
+    System.out.println(Dynamic(prices));
 
     }
 }
