@@ -1,12 +1,9 @@
-
 public class _206_Reverse_Linked_List {
     public static class ListNode {
         int val;
         ListNode next;
 
-        ListNode() {
-        }
-
+        
         ListNode(int val) {
             this.val = val;
         }
@@ -25,6 +22,7 @@ public class _206_Reverse_Linked_List {
          }
          return head;
     }
+
       public static ListNode Recursive(ListNode head) {
     if (head == null || head.next == null)
       return head;
@@ -42,6 +40,7 @@ public class _206_Reverse_Linked_List {
         System.out.println();
     }
     public static void main(String[] args) {
+        
         ListNode a1 = new ListNode(1);
         ListNode a2 = new ListNode(2);
         ListNode a3 = new ListNode(3);
