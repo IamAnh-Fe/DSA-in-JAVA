@@ -1,20 +1,15 @@
 public class _141_Linked_List_Cycle {
-       public static class ListNode {
-        int val;
-        ListNode next;
+  public static class ListNode {
+    int val;
+    ListNode next;
 
-        
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
+    ListNode(int x) {
+      val = x;
+      next = null;
     }
+  }
      
-    public boolean hasCycle(ListNode head) {
+    public static boolean hasCycle(ListNode head) {
     ListNode slow = head;
     ListNode fast = head;
 
@@ -24,10 +19,17 @@ public class _141_Linked_List_Cycle {
       if (slow == fast)
         return true;
     }
-
     return false;
   }
     public static void main(String[] args) {
-        
+         ListNode a1 = new ListNode(3);
+        ListNode a2 = new ListNode(2);
+        ListNode a3 = new ListNode(0);
+        ListNode a4 = new ListNode(-4);
+
+        a1.next = a2;
+        a2.next = a3;
+        a3.next = a4;
+        System.out.println(hasCycle(a1));
     }
 }

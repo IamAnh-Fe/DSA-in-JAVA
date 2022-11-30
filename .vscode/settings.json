@@ -1,3 +1,9 @@
 {
-  "java.project.sourcePaths": ["Searching", "HashTable", "Array", "Matrix"]
+  "java.project.sourcePaths": [
+    "Searching",
+    "Matrix",
+    "HashTable",
+    "Array",
+    "Linked_List"
+  ]
 }

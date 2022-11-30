@@ -2,8 +2,7 @@ public class _206_Reverse_Linked_List {
     public static class ListNode {
         int val;
         ListNode next;
-
-        
+        ListNode(){}
         ListNode(int val) {
             this.val = val;
         }
@@ -13,14 +12,27 @@ public class _206_Reverse_Linked_List {
             this.next = next;
         }
     }
-     public static ListNode BruteForce(ListNode head) {
-         ListNode curNode = head;
-         while (curNode != null && curNode.next != null) {
-             ListNode nextNode = curNode.next;
-             nextNode.next = head;
-             head = nextNode;
-         }
-         return head;
+
+    public static ListNode BruteForce(ListNode head) {
+        ListNode curNode = head;
+        while (curNode != null && curNode.next != null) {
+            ListNode nextNode = curNode.next;
+            curNode.next = nextNode.next;
+            nextNode.next = head;
+            head = nextNode;
+        }
+        return head;
+    }
+
+    public static ListNode Iterative(ListNode head) {
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+        return prev;
     }
 
       public static ListNode Recursive(ListNode head) {
@@ -48,8 +60,9 @@ public class _206_Reverse_Linked_List {
         a2.next = a3;
         printLinkedList(a1);
         // ListNode newList = BruteForce(a1);
-        ListNode newList = Recursive(a1);
-
+        ListNode newList = Iterative(a1);
+        // ListNode newList = Recursive(a1);
         printLinkedList(newList);
+
     }
 }
