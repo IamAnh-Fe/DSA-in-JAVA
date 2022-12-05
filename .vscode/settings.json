@@ -2,8 +2,9 @@
   "java.project.sourcePaths": [
     "Searching",
     "Matrix",
+    "Linked_List",
     "HashTable",
     "Array",
-    "Linked_List"
+    "Tree"
   ]
 }
