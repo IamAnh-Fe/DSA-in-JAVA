@@ -1,10 +1,11 @@
 {
   "java.project.sourcePaths": [
+    "Tree",
     "Searching",
     "Matrix",
     "Linked_List",
     "HashTable",
     "Array",
-    "Tree"
+    "Backtracking"
   ]
 }
